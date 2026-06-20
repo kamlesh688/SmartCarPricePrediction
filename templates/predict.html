@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block page_title %}Price estimator{% endblock %}
+{% block content %}
+<div class="page-heading">
+  <span class="section-kicker">Smart estimate</span>
+  <h1>Tell us about the vehicle</h1>
+  <p>Complete the details below and receive a model-backed resale estimate in seconds.</p>
+</div>
+<div class="card form-card">
+  <div class="form-card-heading">
+    <div class="section-icon"><i class="fas fa-car-side"></i></div>
+    <div><h2>Vehicle details</h2><p>All fields are required for an accurate estimate.</p></div>
+  </div>
+  <form method="post" novalidate>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label">Brand</label>
+        <select class="form-select" name="brand" id="brand-select" required>
+          <option value="">Select a brand</option>
+          {% for brand in feature_meta.brands %}
+          <option value="{{ brand }}">{{ brand }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Model</label>
+        <select class="form-select" name="model" id="model-select" required>
+          <option value="">Select a brand first</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Manufacturing Year</label>
+        <input type="number" class="form-control" name="year" min="1980" max="{{ feature_meta.years[-1] if feature_meta.years else 2026 }}" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Fuel Type</label>
+        <select class="form-select" name="fuel_type" required>
+          <option value="">Select fuel type</option>
+          {% for fuel in feature_meta.fuel_types %}
+          <option value="{{ fuel }}">{{ fuel }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Transmission</label>
+        <select class="form-select" name="transmission" required>
+          <option value="">Select transmission</option>
+          {% for trans in feature_meta.transmissions %}
+          <option value="{{ trans }}">{{ trans }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Engine Size (cc)</label>
+        <input type="number" class="form-control" name="engine_size_cc" min="500" max="10000" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Mileage (km)</label>
+        <input type="number" class="form-control" name="mileage_km" min="0" max="1000000" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Previous Owners</label>
+        <input type="number" class="form-control" name="owner_count" min="0" max="10" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Prediction Model</label>
+        <select class="form-select" name="model_choice">
+          <option value="best">Best available model</option>
+          <option value="linear_regression">Linear Regression</option>
+          <option value="random_forest">Random Forest</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-actions mt-4 d-flex gap-2 flex-wrap">
+      <button class="btn btn-primary" type="submit"><i class="fas fa-magic me-2"></i>Predict Price</button>
+      <button type="reset" class="btn btn-outline-secondary">Reset</button>
+      <button type="button" class="btn btn-outline-info" id="fillSample">Fill Sample Vehicle</button>
+    </div>
+  </form>
+</div>
+<script>
+const featureMetadata = {{ feature_meta|tojson }};
+</script>
+{% endblock %}

@@ -1,0 +1,10 @@
+{
+  "method": "Domain-aware filtering and manual review",
+  "final_rows": 10000,
+  "rows_flagged": {},
+  "notes": [
+    "Rows with missing or invalid target values were excluded.",
+    "Mileage and engine size were normalized from common textual formats.",
+    "Vehicle age was calculated from the manufacturing year."
+  ]
+}

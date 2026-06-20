@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "original_row_count": 10000,
+    "final_usable_row_count": 10000,
+    "number_of_columns": 13,
+    "number_of_brands": 10,
+    "number_of_models": 30,
+    "average_price": 8852.9644,
+    "median_price": 8858.5,
+    "average_mileage_km": 149239.1118,
+    "average_year": 2011.5437,
+    "average_engine_size_cc": 3000.56
+  },
+  "top_brands": {
+    "Ford": 1048,
+    "Audi": 1038,
+    "Volkswagen": 1020,
+    "Honda": 1009,
+    "Chevrolet": 1003,
+    "Bmw": 999,
+    "Hyundai": 995,
+    "Kia": 976,
+    "Toyota": 970,
+    "Mercedes": 942
+  },
+  "top_models_by_price": {
+    "Equinox": 9156.32,
+    "Tiguan": 9098.86,
+    "Gla": 9049.84,
+    "Impala": 9001.12,
+    "Corolla": 8996.62,
+    "Optima": 8996.32,
+    "Fiesta": 8971.08,
+    "E-Class": 8967.33,
+    "Q5": 8955.26,
+    "C-Class": 8921.66
+  },
+  "average_price_by_brand": {
+    "Audi": 8929.37,
+    "Bmw": 8704.07,
+    "Chevrolet": 9015.68,
+    "Ford": 8852.57,
+    "Honda": 8665.6,
+    "Hyundai": 8778.28,
+    "Kia": 8880.09,
+    "Mercedes": 8980.09,
+    "Toyota": 8798.18,
+    "Volkswagen": 8928.38
+  },
+  "average_price_by_fuel_type": {
+    "Diesel": 8117.34,
+    "Electric": 10032.22,
+    "Hybrid": 9113.03,
+    "Petrol": 8070.56
+  },
+  "average_price_by_transmission": {
+    "Automatic": 9938.25,
+    "Manual": 8363.43,
+    "Semi-Automatic": 8264.27
+  },
+  "price_distribution": {
+    "count": 10000.0,
+    "mean": 8852.9644,
+    "std": 3112.596810289277,
+    "min": 2000.0,
+    "25%": 6646.0,
+    "50%": 8858.5,
+    "75%": 11086.5,
+    "max": 18301.0
+  }
+}

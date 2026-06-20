@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block page_title %}Your valuation{% endblock %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-lg-8">
+    <div class="card shadow-sm p-4">
+      <h2>Prediction Result</h2>
+      <p class="text-muted">Indicative Indian-market estimate for {{ result.valuation_date }}. The range reflects model uncertainty and is not a guaranteed selling price.</p>
+      <div class="result-summary mt-4">
+        <h3>{{ result.predicted_price | currency }}</h3>
+        <p class="mb-1">Estimated 90% price range:</p>
+        <p class="h4">{{ result.lower_price | currency }} – {{ result.upper_price | currency }}</p>
+        <p class="mb-1">Price category:</p>
+        <p class="h5 text-primary">{{ result.price_category }}</p>
+        <p class="mb-1">Model:</p>
+        <p>{{ result.model_name }}</p>
+      </div>
+      <div class="mt-4">
+        <h5>Vehicle summary</h5>
+        <ul class="list-unstyled">
+          <li><strong>Brand:</strong> {{ result.vehicle_summary.brand }}</li>
+          <li><strong>Model:</strong> {{ result.vehicle_summary.model }}</li>
+          <li><strong>Year:</strong> {{ result.vehicle_summary.year }}</li>
+          <li><strong>Fuel:</strong> {{ result.vehicle_summary.fuel_type }}</li>
+          <li><strong>Transmission:</strong> {{ result.vehicle_summary.transmission }}</li>
+          <li><strong>Mileage:</strong> {{ result.vehicle_summary.mileage_km }} km</li>
+          <li><strong>Engine:</strong> {{ result.vehicle_summary.engine_size_cc }} cc</li>
+          <li><strong>Previous owners:</strong> {{ result.vehicle_summary.owner_count }}</li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <h5>Observations</h5>
+        <ul>
+          {% for observation in observations %}
+          <li>{{ observation }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="mt-4 d-flex gap-2">
+        <a href="{{ url_for('predict') }}" class="btn btn-outline-primary">Analyze another vehicle</a>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary">View dashboard</a>
+        <button class="btn btn-outline-secondary" onclick="window.print()">Print result</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

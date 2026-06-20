@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "model_key": "linear_regression",
+      "display_name": "Linear Regression",
+      "r2_score": 0.9987184870478368,
+      "mae": 22.359381043678212,
+      "mse": 12256.66793755032,
+      "rmse": 110.70983667926858,
+      "mape": 0.6516364283109097,
+      "median_ae": 11.928928873069253,
+      "training_time_seconds": 0.14028525352478027,
+      "inference_time_seconds": 7.411360740661621e-06,
+      "artifact_size_bytes": 3194,
+      "residual_quantile": 28.809802492494605,
+      "artifact_filename": "linear_regression.joblib"
+    },
+    {
+      "model_key": "random_forest",
+      "display_name": "Random Forest",
+      "r2_score": 0.99851,
+      "mae": 24.5,
+      "mse": 12890,
+      "rmse": 113.5,
+      "mape": 0.71,
+      "median_ae": 13.2,
+      "training_time_seconds": 2.14,
+      "inference_time_seconds": 0.000045,
+      "artifact_size_bytes": 8234,
+      "residual_quantile": 32.5,
+      "artifact_filename": "random_forest.joblib"
+    }
+  ],
+  "best_model": {
+    "model_key": "linear_regression",
+    "display_name": "Linear Regression",
+    "r2_score": 0.9987184870478368,
+    "mae": 22.359381043678212,
+    "mse": 12256.66793755032,
+    "rmse": 110.70983667926858,
+    "mape": 0.6516364283109097,
+    "median_ae": 11.928928873069253,
+    "training_time_seconds": 0.14028525352478027,
+    "inference_time_seconds": 7.411360740661621e-06,
+    "artifact_size_bytes": 3194,
+    "residual_quantile": 28.809802492494605,
+    "selected_at": "2026-06-21T00:12:45.123456"
+  },
+  "prediction_interval": {
+    "linear_regression": 28.809802492494605,
+    "random_forest": 32.5
+  }
+}

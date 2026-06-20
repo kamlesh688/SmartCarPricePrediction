@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block page_title %}Dataset analysis{% endblock %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h2>Dataset Analysis</h2>
+  {% if analytics.summary %}
+  <div class="row g-4">
+    <div class="col-md-4"><div class="metric-card card p-3"><strong>Records</strong><p>{{ analytics.summary.final_usable_row_count }}</p></div></div>
+    <div class="col-md-4"><div class="metric-card card p-3"><strong>Average Price</strong><p>{{ analytics.summary.average_price | round(0) }}</p></div></div>
+    <div class="col-md-4"><div class="metric-card card p-3"><strong>Average Mileage</strong><p>{{ analytics.summary.average_mileage_km | round(0) }} km</p></div></div>
+  </div>
+  {% else %}
+  <p>Analytics artifacts are not available. Generate them by training models locally.</p>
+  {% endif %}
+</div>
+{% endblock %}

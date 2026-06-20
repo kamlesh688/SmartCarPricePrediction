@@ -1,0 +1,17 @@
+{
+  "currency": "INR",
+  "thresholds": {
+    "threshold_1": 0,
+    "threshold_2": 6067.400000000001,
+    "threshold_3": 8038.0,
+    "threshold_4": 9701.4,
+    "threshold_5": 11601.800000000003
+  },
+  "labels": {
+    "label_1": "Budget Range",
+    "label_2": "Economy Range",
+    "label_3": "Mid Range",
+    "label_4": "Premium Range",
+    "label_5": "Luxury Range"
+  }
+}

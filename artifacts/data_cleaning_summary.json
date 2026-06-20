@@ -1,0 +1,40 @@
+{
+  "original_row_count": 10000,
+  "final_usable_row_count": 10000,
+  "duplicate_rows_removed": 0,
+  "rows_removed_for_missing_target": 0,
+  "rows_removed_for_invalid_price": 0,
+  "rows_removed_for_invalid_year": 0,
+  "rows_removed_for_invalid_mileage": 0,
+  "rows_removed_for_invalid_engine_size": 0,
+  "missing_values_by_column": {
+    "brand": 0,
+    "model": 0,
+    "year": 0,
+    "fuel_type": 0,
+    "transmission": 0,
+    "engine_size_cc": 0,
+    "mileage_km": 0,
+    "owner_count": 0,
+    "selling_price": 0,
+    "car_age": 0,
+    "mileage_per_year": 0,
+    "engine_size_liters": 0,
+    "owner_category": 0
+  },
+  "final_column_data_types": {
+    "brand": "object",
+    "model": "object",
+    "year": "Int64",
+    "fuel_type": "object",
+    "transmission": "object",
+    "engine_size_cc": "Int64",
+    "mileage_km": "Int64",
+    "owner_count": "Int64",
+    "selling_price": "float64",
+    "car_age": "int64",
+    "mileage_per_year": "float64",
+    "engine_size_liters": "float64",
+    "owner_category": "object"
+  }
+}

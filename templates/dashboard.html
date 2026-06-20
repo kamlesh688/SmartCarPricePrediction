@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block page_title %}Model dashboard{% endblock %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h2>Model Comparison Dashboard</h2>
+  <p class="text-muted">Evaluation metrics are loaded from saved regression artifacts and reflect actual trained model performance.</p>
+  {% if model_registry.models %}
+  <div class="row g-4 mt-3">
+    {% for model in model_registry.models %}
+    <div class="col-md-4">
+      <div class="card metric-card">
+        <div class="card-body">
+          <h5>{{ model.display_name }}</h5>
+          <p>R²: {{ model.r2_score }}</p>
+          <p>RMSE: {{ model.rmse }}</p>
+          <p>MAE: {{ model.mae }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>Model artifacts are not available. Run model training locally to populate the dashboard.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+.env.*
+!.env.example
+.agents/
+.codex/
+.DS_Store
+dataset/raw/
+dataset/processed/
+reports/
+*.log

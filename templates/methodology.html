@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block page_title %}Methodology{% endblock %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h2>Methodology</h2>
+  <p>This project uses dataset cleaning, feature engineering, and regression model training to predict used car resale prices.</p>
+  <h3>Workflow</h3>
+  <ol>
+    <li>Dataset inspection and mapping</li>
+    <li>Data cleaning and validation</li>
+    <li>Feature engineering and preprocessing</li>
+    <li>Train/test split with stratification</li>
+    <li>Train Linear Regression and Random Forest</li>
+    <li>Evaluate on the same test split</li>
+    <li>Save artifacts and deploy with Flask</li>
+  </ol>
+</div>
+{% endblock %}

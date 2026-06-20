@@ -1,0 +1,78 @@
+{
+  "models": [
+    {
+      "model_key": "linear_regression",
+      "display_name": "Linear Regression",
+      "artifact_filename": "linear_regression.joblib",
+      "feature_order": [
+        "year",
+        "car_age",
+        "mileage_km",
+        "mileage_per_year",
+        "engine_size_cc",
+        "engine_size_liters",
+        "owner_count",
+        "brand",
+        "model",
+        "fuel_type",
+        "transmission",
+        "owner_category"
+      ],
+      "training_date": "2026-06-20T19:12:22.636783",
+      "sklearn_version": "1.5.3",
+      "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+      "r2_score": 0.9987184870478368,
+      "mae": 22.359381043678212,
+      "rmse": 110.70983667926858,
+      "artifact_size_bytes": 3194,
+      "target_transformed": false,
+      "prediction_interval_residual_quantile": 28.809802492494605,
+      "currency": "INR"
+    },
+    {
+      "model_key": "random_forest",
+      "display_name": "Random Forest Regressor",
+      "artifact_filename": "random_forest.joblib",
+      "feature_order": [
+        "year",
+        "car_age",
+        "mileage_km",
+        "mileage_per_year",
+        "engine_size_cc",
+        "engine_size_liters",
+        "owner_count",
+        "brand",
+        "model",
+        "fuel_type",
+        "transmission",
+        "owner_category"
+      ],
+      "training_date": "2026-06-20T19:12:27.794041",
+      "sklearn_version": "1.5.3",
+      "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+      "r2_score": 0.9627377984167144,
+      "mae": 470.62175908239067,
+      "rmse": 596.9788782747162,
+      "artifact_size_bytes": 18310528,
+      "target_transformed": false,
+      "prediction_interval_residual_quantile": 656.7573887245063,
+      "currency": "INR"
+    }
+  ],
+  "best_model": {
+    "model_key": "linear_regression",
+    "display_name": "Linear Regression",
+    "rmse": 110.70983667926858,
+    "mae": 22.359381043678212,
+    "r2_score": 0.9987184870478368,
+    "selected_at": "2026-06-20T19:12:27.796207"
+  },
+  "prediction_interval": {
+    "linear_regression": {
+      "residual_quantile": 28.809802492494605
+    },
+    "random_forest": {
+      "residual_quantile": 656.7573887245063
+    }
+  }
+}

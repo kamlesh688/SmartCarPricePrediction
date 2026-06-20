@@ -1,0 +1,14 @@
+{
+  "model_key": "linear_regression",
+  "display_name": "Linear Regression",
+  "r2_score": 0.9987184870478368,
+  "mae": 22.359381043678212,
+  "mse": 12256.66793755032,
+  "rmse": 110.70983667926858,
+  "mape": 0.6516364283109097,
+  "median_ae": 11.928928873069253,
+  "training_time_seconds": 0.14028525352478027,
+  "inference_time_seconds": 7.411360740661621e-06,
+  "artifact_size_bytes": 3194,
+  "residual_quantile": 28.809802492494605
+}

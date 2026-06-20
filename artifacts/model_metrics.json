@@ -1,0 +1,28 @@
+{
+  "linear_regression": {
+    "display_name": "Linear Regression",
+    "r2_score": 0.9987184870478368,
+    "mae": 22.359381043678212,
+    "mse": 12256.66793755032,
+    "rmse": 110.70983667926858,
+    "mape": 0.6516364283109097,
+    "median_ae": 11.928928873069253,
+    "training_time_seconds": 0.14028525352478027,
+    "inference_time_seconds": 7.411360740661621e-06,
+    "artifact_size_bytes": 3194,
+    "residual_quantile": 28.809802492494605
+  },
+  "random_forest": {
+    "display_name": "Random Forest Regressor",
+    "r2_score": 0.9627377984167144,
+    "mae": 470.62175908239067,
+    "mse": 356383.78110613837,
+    "rmse": 596.9788782747162,
+    "mape": 6.849866349231672,
+    "median_ae": 392.273740468263,
+    "training_time_seconds": 1.692310094833374,
+    "inference_time_seconds": 0.00012784767150878906,
+    "artifact_size_bytes": 18310528,
+    "residual_quantile": 656.7573887245063
+  }
+}
