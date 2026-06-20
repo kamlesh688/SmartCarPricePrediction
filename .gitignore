@@ -15,3 +15,4 @@ dataset/raw/
 dataset/processed/
 reports/
 *.log
+*-share.zip
